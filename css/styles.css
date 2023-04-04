@@ -239,13 +239,15 @@ body {
 
 .hero{
     padding: 188px 0;
-    background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), 
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7) ), 
     url(../images/hero-bcg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
-
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -279,7 +281,6 @@ body {
     background-color: #404BBF;
 }
 
-/* hero */
 
 /* advantages */
 
@@ -307,11 +308,19 @@ body {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em
-       
+    letter-spacing: 0.02em    
 }
 
-
+.icon-advantages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    background: #F4F4FD;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
 /* work */
 
 
@@ -469,6 +478,16 @@ body {
     
 }
 
+.button.portfolio:hover,
+.button.portfolio:focus {
+    color: #fff;
+    border: 1px solid #404BBF;
+    background-color: #404BBF;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .list-button .item:not(:last-child){
     margin-right: 24px;
 }
@@ -498,11 +517,7 @@ body {
     padding-left: 16px;
     padding-right: 16px;
 }
-.button.portfolio:hover,
-.button.portfolio:focus {
-    color: #fff;
-    background-color: #404BBF;
-}
+
 
 .list-title{
     margin-bottom: 8px;
@@ -517,8 +532,8 @@ body {
     color: #434455;
 }
 
-.list-card .link:hover .card  ,
-.list-card .link:focus .card{
+.list-card .item:hover ,
+.list-card .item:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 2px 1px rgba(46, 47, 66, 0.08);
